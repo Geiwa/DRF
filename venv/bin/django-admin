@@ -1,4 +1,4 @@
-#!/home/geiwa/DRFtest/venv/bin/python3
+#!/home/geiwa/DRF/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
