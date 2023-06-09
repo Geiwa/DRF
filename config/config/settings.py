@@ -4,8 +4,8 @@ from environ import Env
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-env=Env()
-env.read_env(BASE_DIR / ' .env')
+# env=Env()
+# env.read_env(BASE_DIR / ' .env')
 
 
 # Quick-start development settings - unsuitable for production
@@ -15,12 +15,15 @@ env.read_env(BASE_DIR / ' .env')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
+SECRET_KEY='django-insecure-joim0zv#pc)w0s*g8##$1)934rs4%13pb86mo91shmjn*1*5p+'
 
-SECRET_KEY = env.str("SECRET_KEY")
+# SECRET_KEY = env.str("SECRET_KEY")
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
+
 
 
 # Application definition
@@ -83,15 +86,15 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
-DATABASE = {'default': env.db()}
+# DATABASE = {'default': env.db()}
 
 
 # DATABASES = {
